@@ -16,12 +16,8 @@ import ssl
 import certifi
 
 ssl_context = ssl.create_default_context()
-ssl_context.load_verify_locations(certifi.where())
-
-bot_app_key = "rCFHpJAyrIAcyvvsQXzCMFlWNzineCBshZxQxFrXWKLSGWmApsYAebXNwolcfLOoculDlpzQrUlDVDcPvPhQuWOqMKigYzEyIYSshTvCutTYkYdhUpHlwdDFTBsiBLWO"  # 机器人密钥，不是BotBizId (从运营接口人处获取)
+ssl_context.load_verify_locations(certifi.where())# 机器人密钥，不是BotBizId (从运营接口人处获取)
 visitor_biz_id = "awa"  # 访客 ID（外部系统提供，需确认不同的访客使用不同的 ID）
-secret_id = "AKID1sVwAC1kRzb4MSM3WltoWBkDjCTXtLet"  # 填入腾讯云AKSK密钥(从腾讯云控制台获取)
-secret_key = "JTgmhQwELEuMceR0NWR8csuiIfplT0Lo"  # 填入腾讯云AKSK密钥(从腾讯云控制台获取)
 tencent_cloud_domain = "tencentcloudapi.com"  # 腾讯云API域名
 scheme = "https"  # 协议
 req_method = "POST"  # 请求方法
